@@ -18,6 +18,7 @@ class OnboardingScreen extends StatelessWidget {
 
               },
               child: Text('Skip',style:Styles.text18 ,),
+              
                ),
           )
         ],
