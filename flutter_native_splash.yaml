@@ -1,0 +1,7 @@
+flutter_native_splash:
+  color: "#C53142"
+  image: assets/images/resturant_splash.jpg
+
+  android_12:
+    image: assets/images/Safe Food.png
+    color: "#C53142"
