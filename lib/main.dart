@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Resturant App',
+      debugShowCheckedModeBanner: false,
       // theme: ThemeData(
       //   primarySwatch: ColorManager.white,
       // ),
