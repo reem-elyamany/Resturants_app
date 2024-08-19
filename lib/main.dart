@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/routing/app_router.dart';
 import 'package:resturant_app/core/routing/routes.dart';
-import 'package:resturant_app/core/theming/colors.dart';
 //import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/features/onboarding/widgets/constans.dart';
-import 'package:resturant_app/features/onboarding/widgets/onboarding_icon.dart';
+import 'package:resturant_app/features/onboarding/widgets/onboarding_bottom.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -12,6 +12,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +22,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Expanded(
               child: PageView.builder(
                   itemCount: onboardingContent.length,
+                  onPageChanged: (int index) {
+                    setState(() {
+                      currentIndex = index;
+                    });
+                  },
                   itemBuilder: (_, i) {
                     return Padding(
                       padding: const EdgeInsets.all(25.0),
@@ -34,7 +40,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           Text(
                             onboardingContent[i].title,
-                            style: Styles.text30,
+                            style: Styles.text25,
                           ),
                           const SizedBox(
                             height: 20,
@@ -43,7 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             onboardingContent[i].description,
                             style: Styles.text14.copyWith(shadows: [
                               const BoxShadow(
-                                color: ColorManager.lightGray,
+                                color: ColorManager.mintGray,
                                 blurRadius: 1.5,
                               )
                             ]),
@@ -55,20 +61,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   }),
             ),
             Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                children: [
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcome');
-                      },
-                      child: Text(
-                        'Skip',
-                        style: Styles.text14.copyWith(fontSize: 18),
-                      )),
-                ],
-              ),
-            )
+              padding: const EdgeInsets.only(bottom: 35),
+              child: OnboardingBottom(),
+            ),
           ],
         ));
   }
@@ -98,3 +93,4 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 //                   );
 //   }
 // }
+
