@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -14,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final bool? readOnly;
+  final Color? fillColor;
   final void Function()? onTap;
 
   const CustomTextFormField({
@@ -30,6 +30,7 @@ class CustomTextFormField extends StatelessWidget {
     this.prefixIcon,
     this.readOnly,
     this.onTap,
+    this.fillColor,
   });
 
   @override
@@ -41,7 +42,7 @@ class CustomTextFormField extends StatelessWidget {
           InputDecoration(
               contentPadding: EdgeInsets.symmetric(horizontal: 20),
               filled: filled ?? true,
-              fillColor: ColorManager.white,
+              fillColor: fillColor ?? ColorManager.white,
               hintText: hintText ?? '',
               hintStyle: TextStyle(
                 color: Colors.grey,

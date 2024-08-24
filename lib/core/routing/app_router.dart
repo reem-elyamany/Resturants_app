@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/routing/routes.dart';
+import 'package:resturant_app/features/auth/forget_password_screen.dart';
 import 'package:resturant_app/features/auth/login_screen.dart';
 import 'package:resturant_app/features/auth/register.dart';
+import 'package:resturant_app/features/auth/success_change_password.dart';
+import 'package:resturant_app/features/auth/success_screen.dart';
 import 'package:resturant_app/features/auth/welcome_screen.dart';
+import 'package:resturant_app/features/auth/change_password_screen.dart';
 import 'package:resturant_app/features/home/home_screen.dart';
 import 'package:resturant_app/features/onboarding/onboarding_screen.dart';
 
@@ -21,8 +25,17 @@ class AppRouter{
       case Routes.login:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
 
-      // case Routes.auth:
-      //   return MaterialPageRoute(builder: (_) => const Auth());
+      case Routes.forgetPassword:
+        return MaterialPageRoute(builder: (_) => const ForgetPasswordScreen());
+
+       case Routes.changePassword:
+        return MaterialPageRoute(builder: (_) => const ChangePasswordScreen()); 
+
+       case Routes.successChangePassword:
+        return MaterialPageRoute(builder: (_) => const SuccessChangePassword());
+
+      case Routes.successScreen:
+        return MaterialPageRoute(builder: (_) => const SuccessScreen());
 
       case Routes.home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());

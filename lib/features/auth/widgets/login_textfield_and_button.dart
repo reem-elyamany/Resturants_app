@@ -64,7 +64,9 @@ class _LoginTextfieldAndButtonState extends State<LoginTextfieldAndButton> {
               validator: (value) => FormValidator.validatePassword(value),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/forgetPassword');
+              },
               child: Align(
                 alignment: AlignmentDirectional.centerEnd,
                 child: Text(

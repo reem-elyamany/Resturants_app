@@ -21,7 +21,7 @@ class RegisterContainerContent extends StatelessWidget {
           TextButton(
               onPressed: () {},
               child: Text('Create Account',
-                  style: Styles.text23.copyWith(color: ColorManager.green))),
+                  style: Styles.text21.copyWith(color: ColorManager.green))),
           Divider(
             color: ColorManager.green,
             thickness: 2,

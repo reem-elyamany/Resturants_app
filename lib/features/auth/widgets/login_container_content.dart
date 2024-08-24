@@ -12,11 +12,10 @@ class LoginContainerContent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       child: Column(
         children: [
-         
           TextButton(
               onPressed: () {},
               child: Text('Login',
-                  style: Styles.text23.copyWith(color: ColorManager.green))),
+                  style: Styles.text21.copyWith(color: ColorManager.green))),
           Divider(
             color: ColorManager.green,
             thickness: 2,

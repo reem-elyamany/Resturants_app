@@ -7,6 +7,11 @@ abstract class Styles {
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle text15 = const TextStyle(
+    color: ColorManager.darktGray,
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+  );
   static TextStyle text12 = const TextStyle(
     color: ColorManager.darktGray,
     fontSize: 12,
@@ -18,10 +23,16 @@ abstract class Styles {
     fontSize: 25,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle text23 = const TextStyle(
+  static TextStyle text21 = const TextStyle(
     color: ColorManager.mintGray,
-    fontSize: 23,
+    fontSize: 21,
     fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle text20 = const TextStyle(
+    color: ColorManager.minDarktGray,
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
   );
 
   static TextStyle text16 = const TextStyle(
