@@ -83,7 +83,7 @@ class _LoginTextfieldAndButtonState extends State<LoginTextfieldAndButton> {
               text: 'Login',
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/allHomeScreens');
                   emailController.clear();
                   passwordController.clear();
                 }

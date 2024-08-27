@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/features/onboarding/widgets/constans.dart';
-import 'package:resturant_app/features/onboarding/widgets/onboarding_bottom.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -13,6 +13,19 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   int currentIndex = 0;
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    _pageController = PageController(initialPage: 0);
+    super.initState();
+  }
+
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +34,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           children: [
             Expanded(
               child: PageView.builder(
+                  controller: _pageController,
                   itemCount: onboardingContent.length,
                   onPageChanged: (int index) {
                     setState(() {
@@ -62,12 +76,47 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 35),
-              child: OnboardingBottom(),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/welcome');
+                      },
+                      child: Text(
+                        'Skip',
+                        style: Styles.text14.copyWith(fontSize: 18),
+                      )),
+                  SmoothPageIndicator(
+                    controller: _pageController,
+                    count: 3,
+                    effect: const ExpandingDotsEffect(
+                      dotHeight: 8,
+                      dotWidth: 8,
+                      dotColor: Colors.grey,
+                      activeDotColor: Colors.green,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        _pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.ease,
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.arrow_forward,
+                        color: ColorManager.green,
+                      )),
+                ],
+              ),
             ),
           ],
         ));
   }
 }
+
+class ColorsManger {}
 
 
 

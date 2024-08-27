@@ -12,4 +12,12 @@ class Routes {
   static const String successScreen = '/successScreen';
   static const String changePassword = '/changePassword';
   static const String successChangePassword = '/successChangePassword';
+  static const String bookingHistoryScreen = '/bookingHistoryScreen';
+  static const String ditailsScreen = '/ditailsScreen';
+  static const String profileScreen = '/profileScreen';
+
+  static const String allHomeScreens = '/allHomeScreens';
+ 
+
+
 }

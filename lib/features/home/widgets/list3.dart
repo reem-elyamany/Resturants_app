@@ -4,28 +4,34 @@ import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/core/widgets/custom_button.dart';
 
 class List3 extends StatelessWidget {
-  const List3({super.key});
+  const List3(
+      {super.key, this.buttonText, this.image, this.text, this.hintText});
+
+  final String? buttonText;
+  final Image? image;
+  final String? text;
+  final String? hintText;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(6.0),
       child: SizedBox(
-        width: 400,
-        height: 600,
+        width: 430,
+        height: 550,
         child: ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           padding: EdgeInsets.zero,
-          itemCount: 7,
+          itemCount: 3,
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           itemBuilder: (context, index) {
             return Card(
-                elevation: 20,
+                elevation: 3,
                 // shadowColor: ColorManager.white,
                 color: ColorManager.white,
                 child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -33,15 +39,17 @@ class List3 extends StatelessWidget {
                           width: 80,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12.0),
-                            child: Image.asset(
-                              'asset/images/home/Rectangle 387.png',
-                              fit: BoxFit.cover,
-                            ),
+                            child: image ??
+                                Image.asset(
+                                  'asset/images/home/Rectangle 387.png',
+                                  fit: BoxFit.cover,
+                                ),
                           ),
                         ),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Amborosia Hotel &Resturant',
+                            Text(text ?? 'Amborosia Hotel ',
                                 style: Styles.text18),
                             const SizedBox(
                               height: 5,
@@ -50,18 +58,21 @@ class List3 extends StatelessWidget {
                               children: [
                                 Image.asset('asset/images/home/Frame (1).png'),
                                 Text(
-                                  'Kanzi Deiry, Taiger Pass',
+                                  hintText ?? 'Kanzi Deiry, Taiger Pass',
                                   style: Styles.text14,
                                 ),
                               ],
                             ),
-                            CustomButton(
-                              width: 120,
-                              height: 35,
-                              text: 'Book',
-                              onPressed: () {},
-                            )
                           ],
+                        ),
+                        CustomButton(
+                          width: 100,
+                          height: 35,
+                          text: buttonText ?? 'Book',
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, '/bookingHistoryScreen');
+                          },
                         )
                       ],
                     )));
