@@ -12,41 +12,57 @@ class AllHomeScreens extends StatefulWidget {
 }
 
 class _AllHomeScreensState extends State<AllHomeScreens> {
+  int currentPage = 0; // Move currentPage here
+
+  final List<Widget> _screens = [
+    const HomeBody(),
+    const BookingHistoryBody(),
+    const ProfileBody()
+  ];
+
   @override
   Widget build(BuildContext context) {
-    int currentPage = 0;
-    final List<Widget> _screens = [
-      const HomeBody(),
-      const BookingHistoryBody(),
-      const ProfileBody()
-    ];
-
     return Scaffold(
-        body: _screens[currentPage],
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: currentPage,
-          onTap: (value) {
-            setState(() {
-              currentPage = value;
-            });
-          },
-          selectedItemColor: ColorManager.green,
-          unselectedItemColor: Colors.grey,
-          items: [
-            BottomNavigationBarItem(
-              
-                icon: Image.asset(
-                  'asset/images/home/Frame (15).png',
-                ),
-                
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Image.asset('asset/images/home/Frame (13).png'),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Image.asset('asset/images/home/Frame (14).png'),
-                label: ''),
-          ],
-        ));
+      body: _screens[currentPage],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentPage,
+        onTap: (value) {
+          setState(() {
+            currentPage = value;
+          });
+        },
+        selectedItemColor: ColorManager.green,
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 40,
+            ),
+            // Image.asset(
+            //   'asset/images/home/Frame (15).png',
+            // ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.history,
+              size: 40,
+            ),
+
+            // Image.asset('asset/images/home/Frame (13).png'),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outlined,
+              size: 40,
+            ),
+            //Image.asset('asset/images/home/Frame (14).png'),
+            label: '',
+          ),
+        ],
+      ),
+    );
   }
 }
