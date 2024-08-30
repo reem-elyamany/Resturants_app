@@ -12,13 +12,13 @@ class BookingHistoryBody extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        BookingAppbar(
+        const BookingAppbar(
           
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        List3(
+        const List3(
           text: 'Tava Restaurant',
           hintText: 'Zakir Hossain Rd',
           buttonText: 'Check',
@@ -34,7 +34,7 @@ class BookingHistoryBody extends StatelessWidget {
             Navigator.pushNamed(context, '/ditailsScreen');
           },
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

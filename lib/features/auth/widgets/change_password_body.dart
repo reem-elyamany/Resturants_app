@@ -27,7 +27,7 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(
+            const Spacer(
               flex: 2,
             ),
             Text(
@@ -36,7 +36,7 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
             ),
             Text('Enter your registered email below',
                 style: Styles.text18.copyWith(color: ColorManager.mintGray)),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Text('New Password',
@@ -88,7 +88,7 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
               ),
               validator: (value) => FormValidator.validatePassword(value),
             ),
-            Spacer(
+            const Spacer(
               flex: 5,
             ),
             CustomButton(
@@ -100,7 +100,7 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
                   }
                   // Navigator.pushNamed(context, '/successChangePassword');
                 }),
-            SizedBox(
+            const SizedBox(
               height: 30,
             )
           ],

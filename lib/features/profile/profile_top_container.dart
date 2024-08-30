@@ -13,7 +13,7 @@ class ProfileTopContainer extends StatelessWidget {
             color: ColorManager.mintGray.withOpacity(.2),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           )
         ], borderRadius: BorderRadius.circular(20), color: ColorManager.white),
         child: Padding(
@@ -34,10 +34,10 @@ class ProfileTopContainer extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
-              Icon(
+              const Icon(
                 Icons.notifications_sharp,
               )
             ],

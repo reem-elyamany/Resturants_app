@@ -22,7 +22,7 @@ class RegisterContainerContent extends StatelessWidget {
               onPressed: () {},
               child: Text('Create Account',
                   style: Styles.text21.copyWith(color: ColorManager.green))),
-          Divider(
+          const Divider(
             color: ColorManager.green,
             thickness: 2,
             indent: 110,

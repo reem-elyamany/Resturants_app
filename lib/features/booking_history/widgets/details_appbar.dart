@@ -13,7 +13,7 @@ class DetailsAppbar extends StatelessWidget {
     return Container(
       height: 80,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(25),
           bottomRight: Radius.circular(25),
@@ -30,7 +30,7 @@ class DetailsAppbar extends StatelessWidget {
               text ?? 'Booking History',
               style: Styles.text21.copyWith(color: ColorManager.white),
             ),
-            SizedBox(
+            const SizedBox(
               width: 70,
             )
           ],

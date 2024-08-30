@@ -10,9 +10,9 @@ class RigesterBody extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('asset/images/auth/auth.jpg'),
+              image:  AssetImage('asset/images/auth/auth.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -21,13 +21,13 @@ class RigesterBody extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: 570,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
                 ),
                 color: ColorManager.white),
-            child: RegisterContainerContent(),
+            child: const RegisterContainerContent(),
           ),
         ),
       ],

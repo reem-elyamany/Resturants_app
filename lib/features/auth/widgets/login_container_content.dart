@@ -16,7 +16,7 @@ class LoginContainerContent extends StatelessWidget {
               onPressed: () {},
               child: Text('Login',
                   style: Styles.text21.copyWith(color: ColorManager.green))),
-          Divider(
+          const Divider(
             color: ColorManager.green,
             thickness: 2,
             indent: 142,

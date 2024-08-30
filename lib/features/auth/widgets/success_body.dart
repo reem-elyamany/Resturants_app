@@ -15,7 +15,7 @@ class SuccessBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Spacer(
+            const Spacer(
               flex: 8,
             ),
             Image.asset('asset/images/auth/Success Icon.png'),
@@ -23,7 +23,7 @@ class SuccessBody extends StatelessWidget {
               'Success',
               style: Styles.text25.copyWith(fontWeight: FontWeight.w900),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
@@ -31,7 +31,7 @@ class SuccessBody extends StatelessWidget {
               style: Styles.text20.copyWith(),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -51,7 +51,7 @@ class SuccessBody extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(
+            const Spacer(
               flex: 4,
             ),
             CustomButton(
@@ -59,7 +59,7 @@ class SuccessBody extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/changePassword');
                 }),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             CustomButton(
@@ -67,7 +67,7 @@ class SuccessBody extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 }),
-            Spacer(
+            const Spacer(
               flex: 1,
             )
           ],

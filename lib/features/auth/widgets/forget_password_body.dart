@@ -24,7 +24,7 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Spacer(
+            const Spacer(
               flex: 3,
             ),
             Text('Forget Password',
@@ -36,7 +36,7 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
             ),
             const SizedBox(height: 70),
             Text('Email address', style: Styles.text15),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
             CustomTextFormField(
@@ -62,7 +62,7 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
                 ),
               ],
             ),
-            Spacer(
+            const Spacer(
               flex: 10,
             ),
             CustomButton(
@@ -75,7 +75,7 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
                 //  Navigator.pushNamed(context, '/successScreen');
               },
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             )
           ],

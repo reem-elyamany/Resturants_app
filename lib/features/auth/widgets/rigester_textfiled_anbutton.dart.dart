@@ -4,7 +4,6 @@ import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/core/widgets/custom_button.dart';
 import 'package:resturant_app/core/widgets/text_field.dart';
-import 'package:resturant_app/features/auth/widgets/rigester_button.dart';
 
 class RigesterTextFieldAndButton extends StatefulWidget {
   const RigesterTextFieldAndButton({super.key});
@@ -35,7 +34,7 @@ class _RigesterTextFieldAndButtonState
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Full Name', style: Styles.text18),
-        SizedBox(
+        const SizedBox(
           height: 7,
         ),
         CustomTextFormField(
@@ -46,7 +45,7 @@ class _RigesterTextFieldAndButtonState
         ),
         const SizedBox(height: 15),
         Text('Email address', style: Styles.text18),
-        SizedBox(
+        const SizedBox(
           height: 7,
         ),
         CustomTextFormField(
@@ -57,7 +56,7 @@ class _RigesterTextFieldAndButtonState
         ),
         const SizedBox(height: 15),
         Text('Password', style: Styles.text18),
-        SizedBox(
+        const SizedBox(
           height: 7,
         ),
         CustomTextFormField(
@@ -93,7 +92,7 @@ class _RigesterTextFieldAndButtonState
                 }
           },
         ),
-        Divider(
+        const Divider(
           color: ColorManager.mintGray,
           thickness: .5,
           indent: 70,

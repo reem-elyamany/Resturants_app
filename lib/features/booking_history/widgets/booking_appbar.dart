@@ -13,7 +13,7 @@ class BookingAppbar extends StatelessWidget {
     return Container(
       height: 80,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(25),
           bottomRight: Radius.circular(25),

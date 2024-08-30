@@ -33,7 +33,7 @@ class TextList2 extends StatelessWidget {
                 'See all',
                 style: Styles.text14,
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios,
                 size: 15,
                 color: ColorManager.mintGray,

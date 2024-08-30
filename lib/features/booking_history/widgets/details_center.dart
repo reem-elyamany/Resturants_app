@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resturant_app/features/booking_history/widgets/DetailsCenterTopContainer.dart';
+import 'package:resturant_app/features/booking_history/widgets/detailsCenterTopContainer.dart';
 import 'package:resturant_app/features/booking_history/widgets/details_center_bottom_container.dart';
 
 class DetailsCenter extends StatelessWidget {
@@ -7,7 +7,7 @@ class DetailsCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
           children: [
     DetailsCenterTopContainer(),
     SizedBox(height: 10,),

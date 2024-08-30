@@ -6,6 +6,6 @@ class SuccessChangePassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SuccessChangePasswordBody());
+    return const Scaffold(body: SuccessChangePasswordBody());
   }
 }

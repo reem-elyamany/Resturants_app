@@ -18,27 +18,27 @@ class DetailsScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back,
                 color: ColorManager.white,
               )),
-          sizedBox: SizedBox(
+          sizedBox: const SizedBox(
               // width: 60,
               ),
           text: 'Details Resturant',
         ),
       ),
-      body: SingleChildScrollView(child: DetailsCenter()),
+      body: const SingleChildScrollView(child: DetailsCenter()),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
           boxShadow: [
             BoxShadow(
               color: ColorManager.mintGray.withOpacity(.2),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: Offset(0, 3),
+              offset: const Offset(0, 3),
             ),
           ],
         ),

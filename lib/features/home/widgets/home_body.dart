@@ -1,7 +1,6 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:resturant_app/core/theming/colors.dart';
-import 'package:resturant_app/core/theming/font.dart';
-import 'package:resturant_app/features/home/widgets/appbar..dart';
+import 'package:resturant_app/features/home/widgets/app_bar.dart';
 import 'package:resturant_app/features/home/widgets/list1.dart';
 import 'package:resturant_app/features/home/widgets/list2.dart';
 import 'package:resturant_app/features/home/widgets/list3.dart';
@@ -17,10 +16,10 @@ class HomeBody extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: CustomAppBar(),
+        title: const CustomAppBar(),
       ),
-      body: const CustomScrollView(
-        physics: BouncingScrollPhysics(),
+      body:  CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -30,22 +29,22 @@ class HomeBody extends StatelessWidget {
                 //   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
                 //   child: CustomAppBar(),
                 // ),
-                Search(),
-                List1(),
+                const Search(),
+                FadeInRightBig(child: const List1()),
                 // SizedBox(
                 //   height: 30,
                 // ),
-                TextList2(),
-                List2(),
-                SizedBox(
+                const TextList2(),
+                const List2(),
+                const SizedBox(
                   height: 30,
                 ),
-                ListList3(),
+                const ListList3(),
                 // CustomBottomNavigationBar(),
               ],
             ),
           ),
-          SliverFillRemaining(
+          const SliverFillRemaining(
             child: List3(),
           ),
         ],

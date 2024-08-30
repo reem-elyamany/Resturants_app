@@ -13,16 +13,16 @@ class ProfileBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 30),
       child: Column(
         children: [
-          ProfileTopContainer(),
-          SizedBox(
+          const ProfileTopContainer(),
+          const SizedBox(
             height: 50,
           ),
-          ProfileMidContainer(),
-          SizedBox(
+          const ProfileMidContainer(),
+          const SizedBox(
             height: 10,
           ),
-          ProfileButtomContainer(),
-          SizedBox(
+          const ProfileButtomContainer(),
+          const SizedBox(
             height: 30,
           ),
           CustomButton(

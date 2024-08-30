@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/helpers/validation.dart';
@@ -6,7 +5,6 @@ import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/core/widgets/custom_button.dart';
 import 'package:resturant_app/core/widgets/text_field.dart';
-import 'package:resturant_app/features/auth/widgets/login_button.dart';
 
 class LoginTextfieldAndButton extends StatefulWidget {
   const LoginTextfieldAndButton({super.key});
@@ -89,7 +87,7 @@ class _LoginTextfieldAndButtonState extends State<LoginTextfieldAndButton> {
                 }
               },
             ),
-            Divider(
+            const Divider(
               color: ColorManager.mintGray,
               thickness: .5,
               indent: 70,

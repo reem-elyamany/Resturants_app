@@ -14,7 +14,7 @@ class DetailsCenterBottomContainer extends StatelessWidget {
           color: ColorManager.mintGray.withOpacity(.2),
           spreadRadius: 5,
           blurRadius: 7,
-          offset: Offset(0, 3),
+          offset: const Offset(0, 3),
         ),
       ], borderRadius: BorderRadius.circular(20), color: ColorManager.white),
       child: Column(
@@ -43,7 +43,7 @@ class DetailsCenterBottomContainer extends StatelessWidget {
                       'See All',
                       style: Styles.text16.copyWith(color: ColorManager.green),
                     ),
-                    Icon(
+                    const Icon(
                       size: 34,
                       Icons.chevron_right,
                       color: ColorManager.green,
@@ -53,7 +53,7 @@ class DetailsCenterBottomContainer extends StatelessWidget {
               ],
             ),
           ),
-          List3(
+          const List3(
             buttonText: 'Check',
           ),
         ],

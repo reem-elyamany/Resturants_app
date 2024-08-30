@@ -14,7 +14,7 @@ class ProfileButtomContainer extends StatelessWidget {
             color: ColorManager.mintGray.withOpacity(.2),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           )
         ], borderRadius: BorderRadius.circular(15), color: ColorManager.white),
         child: Padding(
@@ -27,7 +27,7 @@ class ProfileButtomContainer extends StatelessWidget {
                   'asset/images/home/Frame 12.png',
                   color: ColorManager.darktGray,
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
@@ -35,16 +35,16 @@ class ProfileButtomContainer extends StatelessWidget {
                   style:
                       Styles.text18.copyWith(color: ColorManager.minDarktGray),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 6,
                 ),
-                Icon(
+                const Icon(
                   size: 34,
                   Icons.chevron_right,
                   color: ColorManager.mintGray,
                 ),
               ]),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(children: [
@@ -52,7 +52,7 @@ class ProfileButtomContainer extends StatelessWidget {
                   'asset/images/home/Frame (10).png',
                   color: ColorManager.minDarktGray,
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
@@ -60,16 +60,16 @@ class ProfileButtomContainer extends StatelessWidget {
                   style:
                       Styles.text18.copyWith(color: ColorManager.minDarktGray),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 6,
                 ),
-                Icon(
+                const Icon(
                   size: 34,
                   Icons.chevron_right,
                   color: ColorManager.mintGray,
                 ),
               ]),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(children: [
@@ -77,7 +77,7 @@ class ProfileButtomContainer extends StatelessWidget {
                   'asset/images/home/Frame 11.png',
                   color: ColorManager.minDarktGray,
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
@@ -85,16 +85,16 @@ class ProfileButtomContainer extends StatelessWidget {
                   style:
                       Styles.text18.copyWith(color: ColorManager.minDarktGray),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 6,
                 ),
-                Icon(
+                const Icon(
                   size: 34,
                   Icons.chevron_right,
                   color: ColorManager.mintGray,
                 ),
               ]),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(children: [
@@ -102,7 +102,7 @@ class ProfileButtomContainer extends StatelessWidget {
                   'asset/images/home/Frame (9).png',
                   color: ColorManager.minDarktGray,
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
@@ -110,10 +110,10 @@ class ProfileButtomContainer extends StatelessWidget {
                   style:
                       Styles.text18.copyWith(color: ColorManager.minDarktGray),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 6,
                 ),
-                Icon(
+                const Icon(
                   size: 34,
                   Icons.chevron_right,
                   color: ColorManager.mintGray,

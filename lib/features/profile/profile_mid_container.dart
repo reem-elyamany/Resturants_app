@@ -14,24 +14,24 @@ class ProfileMidContainer extends StatelessWidget {
             color: ColorManager.mintGray.withOpacity(.2),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           )
         ], borderRadius: BorderRadius.circular(15), color: ColorManager.white),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           child: Row(children: [
-            Icon(
+            const Icon(
               Icons.account_circle,
               color: ColorManager.minDarktGray,
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Text(
               'Account setting',
               style: Styles.text18.copyWith(color: ColorManager.minDarktGray),
             ),
-            Spacer(
+            const Spacer(
               flex: 8,
             ),
             Image.asset(

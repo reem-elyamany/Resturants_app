@@ -16,20 +16,20 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     return BottomNavigationBar(
         mouseCursor: SystemMouseCursors.grab,
         selectedItemColor: ColorManager.green,
-        items: [
-          const BottomNavigationBarItem(
+        items: const [
+          BottomNavigationBarItem(
             icon: Image(
               image: AssetImage('asset/images/home/Frame (3).png'),
             ),
             label: '',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Image(
               image: AssetImage('asset/images/home/Frame (4).png'),
             ),
             label: '',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Image(
               image: AssetImage('asset/images/home/Frame (5).png'),
             ),

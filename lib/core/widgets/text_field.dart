@@ -40,11 +40,11 @@ class CustomTextFormField extends StatelessWidget {
       readOnly: readOnly ?? false,
       decoration: decoration ??
           InputDecoration(
-              contentPadding: EdgeInsets.symmetric(horizontal: 20),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
               filled: filled ?? true,
               fillColor: fillColor ?? ColorManager.white,
               hintText: hintText ?? '',
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: Colors.grey,
                 fontSize: 14,
               ),

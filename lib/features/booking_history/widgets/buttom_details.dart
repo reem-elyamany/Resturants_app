@@ -8,7 +8,7 @@ class ButtomDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: ColorManager.green
 
       ),

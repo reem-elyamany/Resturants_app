@@ -19,7 +19,7 @@ class RigesterButton extends StatelessWidget {
             Navigator.pushNamed(context, '/home');
           },
         ),
-        Divider(
+        const Divider(
           color: ColorManager.mintGray,
           thickness: .5,
           indent: 70,

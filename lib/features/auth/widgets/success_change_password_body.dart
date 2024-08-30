@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
 import 'package:resturant_app/core/widgets/custom_button.dart';
 
@@ -14,7 +13,7 @@ class SuccessChangePasswordBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Spacer(
+          const Spacer(
             flex: 8,
           ),
           Image.asset('asset/images/auth/Success Icon.png'),
@@ -22,7 +21,7 @@ class SuccessChangePasswordBody extends StatelessWidget {
             'Success',
             style: Styles.text25.copyWith(fontWeight: FontWeight.w900),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -30,10 +29,10 @@ class SuccessChangePasswordBody extends StatelessWidget {
             style: Styles.text20.copyWith(fontWeight: FontWeight.w500),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Spacer(
+          const Spacer(
             flex: 4,
           ),
           CustomButton(
@@ -41,7 +40,7 @@ class SuccessChangePasswordBody extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/home');
               }),
-          Spacer(
+          const Spacer(
             flex: 1,
           )
         ],

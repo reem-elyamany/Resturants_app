@@ -53,7 +53,7 @@ class List1 extends StatelessWidget {
                             style: Styles.text18
                                 .copyWith(color: ColorManager.white),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Text(
@@ -68,7 +68,7 @@ class List1 extends StatelessWidget {
                                 .copyWith(color: ColorManager.white),
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -81,7 +81,7 @@ class List1 extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed: () {},
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.arrow_forward_ios_rounded,
                                     color: Colors.white,
                                   ))

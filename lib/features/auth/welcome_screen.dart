@@ -17,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset('asset/images/auth/Order Success.png'),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Text(
@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
               style: Styles.text14,
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             CustomButton(
@@ -46,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/login');
               },
             ),
-            TermsAndConditionsText()
+            const TermsAndConditionsText()
           ],
         ),
       ),

@@ -33,7 +33,7 @@ class _AllHomeScreensState extends State<AllHomeScreens> {
         },
         selectedItemColor: ColorManager.green,
         unselectedItemColor: Colors.grey,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,

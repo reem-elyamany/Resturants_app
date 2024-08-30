@@ -15,7 +15,7 @@ class DetailsCenterTopContainer extends StatelessWidget {
           color: ColorManager.mintGray.withOpacity(.2),
           spreadRadius: 5,
           blurRadius: 7,
-          offset: Offset(0, 3),
+          offset: const Offset(0, 3),
         )
       ], borderRadius: BorderRadius.circular(20), color: ColorManager.white),
       child: Padding(
@@ -37,14 +37,14 @@ class DetailsCenterTopContainer extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Image.asset(
               'asset/images/home/Rectangle 387 (1).png',
               width: double.infinity,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -58,7 +58,7 @@ class DetailsCenterTopContainer extends StatelessWidget {
                         Image.asset(
                           'asset/images/home/Frame (7).png',
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Text(
@@ -68,7 +68,7 @@ class DetailsCenterTopContainer extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 3,
                     ),
                     Text(
