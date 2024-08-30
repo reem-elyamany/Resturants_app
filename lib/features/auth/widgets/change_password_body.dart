@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/helpers/validation.dart';
 import 'package:resturant_app/core/theming/colors.dart';
@@ -30,76 +31,90 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
             const Spacer(
               flex: 2,
             ),
-            Text(
-              'Change New Password',
-              style: Styles.text21.copyWith(color: ColorManager.darktGray),
+            FadeInDown(
+              child: Text(
+                'Change New Password',
+                style: Styles.text21.copyWith(color: ColorManager.darktGray),
+              ),
             ),
-            Text('Enter your registered email below',
-                style: Styles.text18.copyWith(color: ColorManager.mintGray)),
+            FadeInDown(
+              child: Text('Enter your registered email below',
+                  style: Styles.text18.copyWith(color: ColorManager.mintGray)),
+            ),
             const Spacer(
               flex: 1,
             ),
-            Text('New Password',
-                style: Styles.text16.copyWith(color: ColorManager.mintGray)),
+            FadeInDown(
+              child: Text('New Password',
+                  style: Styles.text16.copyWith(color: ColorManager.mintGray)),
+            ),
             const SizedBox(
               height: 7,
             ),
-            CustomTextFormField(
-              controller: passwordController,
-              obscure: isObsecureText,
-              hintText: 'Enter your password',
-              //keyboardType: TextInputType.visiblePassword,
-              suffixIcon: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    isObsecureText = !isObsecureText;
-                  });
-                },
-                child: Icon(
-                  isObsecureText ? Icons.visibility_off : Icons.visibility,
-                  color: ColorManager.green,
+            FadeInDown(
+              child: CustomTextFormField(
+                controller: passwordController,
+                obscure: isObsecureText,
+                hintText: 'Enter your password',
+                //keyboardType: TextInputType.visiblePassword,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isObsecureText = !isObsecureText;
+                    });
+                  },
+                  child: Icon(
+                    isObsecureText ? Icons.visibility_off : Icons.visibility,
+                    color: ColorManager.green,
+                  ),
                 ),
+                validator: (value) => FormValidator.validatePassword(value),
               ),
-              validator: (value) => FormValidator.validatePassword(value),
             ),
             const SizedBox(
               height: 10,
             ),
-            Text('Confarm Password',
-                style: Styles.text16.copyWith(color: ColorManager.mintGray)),
+            FadeInDown(
+              child: Text('Confarm Password',
+                  style: Styles.text16.copyWith(color: ColorManager.mintGray)),
+            ),
             const SizedBox(
               height: 7,
             ),
-            CustomTextFormField(
-              controller: passwordController,
-              obscure: isObsecureText,
-              hintText: 'Enter your password',
-              //keyboardType: TextInputType.visiblePassword,
-              suffixIcon: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    isObsecureText = !isObsecureText;
-                  });
-                },
-                child: Icon(
-                  isObsecureText ? Icons.visibility_off : Icons.visibility,
-                  color: ColorManager.green,
+            FadeInDown(
+              child: CustomTextFormField(
+                controller: passwordController,
+                obscure: isObsecureText,
+                hintText: 'Enter your password',
+                //keyboardType: TextInputType.visiblePassword,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isObsecureText = !isObsecureText;
+                    });
+                  },
+                  child: Icon(
+                    isObsecureText ? Icons.visibility_off : Icons.visibility,
+                    color: ColorManager.green,
+                  ),
                 ),
+                validator: (value) => FormValidator.validatePassword(value),
               ),
-              validator: (value) => FormValidator.validatePassword(value),
             ),
             const Spacer(
               flex: 5,
             ),
-            CustomButton(
-                text: 'Reset Password',
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    Navigator.pushNamed(context, '/home');
-                    passwordController.clear();
-                  }
-                  // Navigator.pushNamed(context, '/successChangePassword');
-                }),
+            FadeInUp(
+              child: CustomButton(
+                  text: 'Reset Password',
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      Navigator.pushNamed(context, '/home');
+                      passwordController.clear();
+                    }
+                    // Navigator.pushNamed(context, '/successChangePassword');
+                  }),
+            ),
             const SizedBox(
               height: 30,
             )

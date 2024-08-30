@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
@@ -53,8 +54,10 @@ class DetailsCenterBottomContainer extends StatelessWidget {
               ],
             ),
           ),
-          const List3(
-            buttonText: 'Check',
+          FadeInRightBig(
+            child: const List3(
+              buttonText: 'Check',
+            ),
           ),
         ],
       ),

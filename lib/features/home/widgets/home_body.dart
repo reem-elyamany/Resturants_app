@@ -18,7 +18,7 @@ class HomeBody extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const CustomAppBar(),
       ),
-      body:  CustomScrollView(
+      body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
@@ -35,7 +35,7 @@ class HomeBody extends StatelessWidget {
                 //   height: 30,
                 // ),
                 const TextList2(),
-                const List2(),
+                FadeInRightBig(child: const List2()),
                 const SizedBox(
                   height: 30,
                 ),
@@ -44,12 +44,11 @@ class HomeBody extends StatelessWidget {
               ],
             ),
           ),
-          const SliverFillRemaining(
-            child: List3(),
+          SliverFillRemaining(
+            child: FadeInRightBig(child: List3()),
           ),
         ],
       ),
-     
     );
   }
 }

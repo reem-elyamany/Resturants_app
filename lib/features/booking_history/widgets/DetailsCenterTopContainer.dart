@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
@@ -7,9 +8,7 @@ class DetailsCenterTopContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    
-    Container(
+    return Container(
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
           color: ColorManager.mintGray.withOpacity(.2),
@@ -40,9 +39,11 @@ class DetailsCenterTopContainer extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Image.asset(
-              'asset/images/home/Rectangle 387 (1).png',
-              width: double.infinity,
+            FadeInRightBig(
+              child: Image.asset(
+                'asset/images/home/Rectangle 387 (1).png',
+                width: double.infinity,
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -94,9 +95,5 @@ class DetailsCenterTopContainer extends StatelessWidget {
         ),
       ),
     );
- 
- 
   }
 }
-
-

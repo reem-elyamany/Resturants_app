@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
@@ -54,27 +55,29 @@ class SuccessBody extends StatelessWidget {
             const Spacer(
               flex: 4,
             ),
-            CustomButton(
-                text: 'Continue',
-                onPressed: () {
-                  Navigator.pushNamed(context, '/changePassword');
-                }),
+            FadeInDown(
+              child: CustomButton(
+                  text: 'Continue',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/changePassword');
+                  }),
+            ),
             const SizedBox(
               height: 5,
             ),
-            CustomButton(
-                text: 'Back Email',
-                onPressed: () {
-                  Navigator.pop(context);
-                }),
+            FadeInUp(
+              child: CustomButton(
+                  text: 'Back Email',
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+            ),
             const Spacer(
               flex: 1,
             )
           ],
         ),
       ),
-  
-  
     );
   }
 }

@@ -1,4 +1,4 @@
-
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/helpers/validation.dart';
 import 'package:resturant_app/core/theming/colors.dart';
@@ -73,19 +73,21 @@ class _LoginTextfieldAndButtonState extends State<LoginTextfieldAndButton> {
                 ),
               ),
             ),
-            CustomButton(
-              color: ColorManager.lightGray,
-              textColor: ColorManager.mintGray,
-              width: 270,
-              height: 50,
-              text: 'Login',
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  Navigator.pushNamed(context, '/allHomeScreens');
-                  emailController.clear();
-                  passwordController.clear();
-                }
-              },
+            FadeInDown(
+              child: CustomButton(
+                color: ColorManager.lightGray,
+                textColor: ColorManager.mintGray,
+                width: 270,
+                height: 50,
+                text: 'Login',
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushNamed(context, '/allHomeScreens');
+                    emailController.clear();
+                    passwordController.clear();
+                  }
+                },
+              ),
             ),
             const Divider(
               color: ColorManager.mintGray,
@@ -93,20 +95,22 @@ class _LoginTextfieldAndButtonState extends State<LoginTextfieldAndButton> {
               indent: 70,
               endIndent: 70,
             ),
-            CustomButton(
-              color: ColorManager.lightGray,
-              textColor: ColorManager.darktGray,
-              width: 270,
-              height: 50,
-              image: Image.asset('asset/images/auth/ic_google.png'),
-              text: 'Login with Google',
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  Navigator.pushNamed(context, '/home');
-                  emailController.clear();
-                  passwordController.clear();
-                }
-              },
+            FadeInUp(
+              child: CustomButton(
+                color: ColorManager.lightGray,
+                textColor: ColorManager.darktGray,
+                width: 270,
+                height: 50,
+                image: Image.asset('asset/images/auth/ic_google.png'),
+                text: 'Login with Google',
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushNamed(context, '/home');
+                    emailController.clear();
+                    passwordController.clear();
+                  }
+                },
+              ),
             ),
           ],
         ));

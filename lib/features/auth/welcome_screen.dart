@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:resturant_app/core/theming/colors.dart';
 import 'package:resturant_app/core/theming/font.dart';
@@ -32,19 +33,23 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            CustomButton(
-              text: 'Create Account',
-              onPressed: () {
-                Navigator.pushNamed(context, '/register');
-              },
+            FadeInDown(
+              child: CustomButton(
+                text: 'Create Account',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/register');
+                },
+              ),
             ),
-            CustomButton(
-              text: 'Login',
-              textColor: ColorManager.green,
-              color: ColorManager.lightGreen,
-              onPressed: () {
-                Navigator.pushNamed(context, '/login');
-              },
+            FadeInUp(
+              child: CustomButton(
+                text: 'Login',
+                textColor: ColorManager.green,
+                color: ColorManager.lightGreen,
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
             ),
             const TermsAndConditionsText()
           ],
